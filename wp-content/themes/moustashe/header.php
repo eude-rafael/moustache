@@ -31,17 +31,16 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Disabled</a>
-            </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Disabled</a>
+                </li>
             </ul>
-
  
                 <div class="frame_search">
                     <form class="form-inline mt-2 mt-md-0">
@@ -58,22 +57,7 @@
     </div>
 </nav>
 
-<!--
-<div class="header">
-        <div class="container">  
-            <div class="menu ">
-                <a href="#"> 
-                    
-                </a>
-                <a href="#" class="active"> Home</a>
-                <a href="#"> Menu 2</a>
-                <a href="#"> Menu 3</a>
-            </div>
-        </div>
-    </div>
--->
-
-
+ 
     <section>
         <div id="myCarousel" class="carousel slide" data-ride="carousel"> 
             <div class="carousel-inner">
@@ -95,6 +79,9 @@
         </div>
     </section>
 
+
+
+    
     <session>
         <div class="container">
             <div id="carouselExample" class="carousel slide" data-ride="carousel" data-interval="9000">
@@ -105,15 +92,13 @@
                                 <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: auto; width: 100%; display: block;" 
                                 src=" <?php home_url(); ?>wp-content/themes/moustashe/assets/img/banner.png" data-holder-rendered="true">
                                 <div class="card-body col-md-11 align-self-center">
-                                
 
-                                <h3  style="font-size: 32px; line-height: 35px;">
+                                <h3>
                                     Lorem ipsum <br class="d-xl-block">
                                     dolor sit
                                 </h3>
 
-
-                                <p class="card-text m-t-20" style="font-size: 15px; line-height: 24px;">
+                                <p class="card-text m-t-20" >
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                 </p>
 
@@ -127,18 +112,13 @@
                                 <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: auto; width: 100%; display: block;" 
                                 src=" <?php home_url(); ?>wp-content/themes/moustashe/assets/img/banner.png" data-holder-rendered="true">
                                 <div class="card-body col-md-11 align-self-center">
-                                
-
-                                <h3  style="font-size: 32px; line-height: 35px;">
+                                <h3 >
                                     Lorem ipsum <br class="d-xl-block">
                                     dolor sit
                                 </h3>
-
-
-                                <p class="card-text m-t-20" style="font-size: 15px; line-height: 24px;">
+                                <p class="card-text m-t-20">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                 </p>
-
                                 <button type="button" class="btn btn-secondary btn-lg btn-block bt-thumb-carrousel m-t-30 m-b-10">Link Externo</button>
 
                                 </div>
@@ -149,11 +129,11 @@
                                 <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: auto; width: 100%; display: block;" 
                                 src=" <?php home_url(); ?>wp-content/themes/moustashe/assets/img/banner.png" data-holder-rendered="true">
                                 <div class="card-body col-md-11 align-self-center">
-                                    <h3  style="font-size: 32px; line-height: 35px;">
+                                    <h3>
                                         Lorem ipsum <br class="d-xl-block">
                                         dolor sit
                                     </h3>
-                                    <p class="card-text m-t-20" style="font-size: 15px; line-height: 24px;">
+                                    <p class="card-text m-t-20">
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                     </p>
                                     <button type="button" class="btn btn-secondary btn-lg btn-block bt-thumb-carrousel m-t-30 m-b-10">Link Externo</button>
@@ -228,22 +208,62 @@
                     <div class="btenviar p-t-10 col-4 align-self-center">
                         <button type="button" class="btn btn-secondary btn-lg btn-block bt-thumb-carrousel m-t-30 m-b-10">Link Externo</button>
                     </div>
-
                 </div>   
             </form>
         </div>
     </session>
 
-
-
-
-
-
-
-
     <session>
         <div class="container">
-            poipoipoi
+            <div class="row m-t-110">
+                <div class="col-sm-4">
+                    <h3>
+                        Lorem Ipsum Dolor Sit
+                    </h3>
+                    <img class="first-slide m-t-10" src="<?php home_url(); ?>wp-content/themes/moustashe/assets/img/line.png" alt="First slide">
+                    <div class="row m-t-20">
+                        <div class="col-2">
+                            <img class="first-slide" src="<?php home_url(); ?>wp-content/themes/moustashe/assets/img/bandeira-br.png" alt="First slide">
+                        </div>
+                        <div class="col-8">
+                            Lorem ipsum dolo sit, 10
+                            Lorem ipsum dolor sit, CEP: 0000000
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-sm-4">
+                    <h3>
+                        Lorem Ipsum Dolor Sit
+                    </h3>
+                    <img class="first-slide m-t-10" src="<?php home_url(); ?>wp-content/themes/moustashe/assets/img/line.png" alt="First slide">
+                    <div class="row m-t-20">
+                        <div class="col-2">
+                            <img class="first-slide" src="<?php home_url(); ?>wp-content/themes/moustashe/assets/img/bandeira-br.png" alt="First slide">
+                        </div>
+                        <div class="col-8">
+                            Lorem ipsum dolo sit, 10
+                            Lorem ipsum dolor sit, CEP: 0000000
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <h3>
+                        Lorem Ipsum Dolor Sit
+                    </h3>
+                    <img class="first-slide m-t-10" src="<?php home_url(); ?>wp-content/themes/moustashe/assets/img/line.png" alt="First slide">
+                    <div class="row m-t-20">
+                        <div class="col-2">
+                            <img class="first-slide" src="<?php home_url(); ?>wp-content/themes/moustashe/assets/img/bandeira-br.png" alt="First slide">
+                        </div>
+                        <div class="col-8">
+                            Lorem ipsum dolo sit, 10
+                            Lorem ipsum dolor sit, CEP: 0000000
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </session>
 
