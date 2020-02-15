@@ -79,9 +79,6 @@
         </div>
     </section>
 
-
-
-    
     <session>
         <div class="container">
             <div id="carouselExample" class="carousel slide" data-ride="carousel" data-interval="9000">
