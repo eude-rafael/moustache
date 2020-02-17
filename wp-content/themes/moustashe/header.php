@@ -83,7 +83,9 @@
     <!-- [   TITLE AREA  ] -->
         <section class="jumbotron bg-fff text-center">
             <div class="container">
-            <h1 class="jumbotron-heading">Conteúdo Interno</h1>
+            <h1 class="jumbotron-heading">
+                <?php the_title(); ?>
+            </h1>
             </div>
         </section>
     <!-- [   TITLE AREA  ] -->
@@ -303,12 +305,12 @@
                         </div>
 
                         <div class="col-4 ">
-                            <input type="text" class="form-control" name="endereco" placeholder="Endereço">
+                            <input type="text" class="form-control" name="endereco" placeholder="EndereÃ§o">
                             <div class="errorFrame" msg="name"></div>
                         </div>
 
                         <div class="col-2 ">
-                            <input type="text" class="form-control" name="endereco_numero" placeholder="Número">
+                            <input type="text" class="form-control" name="endereco_numero" placeholder="NÃºmero">
                             <div class="errorFrame" msg="name"></div>
                         </div>
 
@@ -401,23 +403,16 @@
             </div>
         </session>
     <!-- [   CONTC DATA   ] -->
-
-   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
   
+
+    <style>
+        .testeaqui {padding: 60px 0px 60px 0px; background:#8aa982; margin: 100px 0 ;}
+    </style>
+
+
+    <div class="testeaqui">
+        pqp 
+    </div>
+
+
+
