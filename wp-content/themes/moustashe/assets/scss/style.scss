@@ -1,7 +1,7 @@
 /*
     ========================== [head] ======================== 
     |   Theme name: Moustache
-    |   Theme URL: --
+    |   Theme URL: Localhost.test
     |   Description: Teme test  
     |   Version: 1.0
     |   Developed by: Eude Rafael de Souza
@@ -9,5 +9,7 @@
     ========================== [head] ======================== 
 */
 @charset "UTF-8";
-@import 'scss_parts/carousel';
+
 @import 'scss_parts/base'; 
+@import 'scss_parts/form';
+@import 'scss_parts/carousel';
