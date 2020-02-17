@@ -1,7 +1,25 @@
 $(function(){
+
     /* =====    =====   [       Carousel        ]   =====   ===== */
-    $('#carousel_products').carousel({ interval: 3500 });
+        $('#carousel_products').carousel({ interval: 3500 });
     /* =====    =====   [       Carousel        ]   =====   ===== */
+
+    // |    =====   =====    =====   =====   =====   =====
+    // |    =====   [   Control error    ]    -----
+    // |    =====   =====    =====   =====   =====   =====
+        function controlError(id, addOrRemove=true, mesage="")
+        {
+            if(addOrRemove)
+            {
+                id.parent('div').find('.errorFrame').html("").removeClass('error');
+            }else{
+                id.parent('div').find('.errorFrame').html(mesage).addClass('error');
+            }
+        }
+    // |    =====   =====    =====   =====   =====   =====
+    // |    =====   [   Control error    ]    -----
+    // |    =====   =====    =====   =====   =====   =====
+
 
     // |    =====   =====    =====   =====   =====   =====
     // |    =====   [   Verificando o CEP    ]    -----
@@ -20,14 +38,14 @@ $(function(){
             strCEP = Trim(strCEP)
             if(strCEP.length > 0){ 
                 if(objER.test(strCEP)){
-                    id.parent('div').find('.errorFrame').html("").removeClass('error');            
+                    controlError(id,true, "");
                     return true;
                 }else{
-                    id.parent('div').find('.errorFrame').html(mensageErrorCep).addClass('error');
+                    controlError(id,false, mensageErrorCep);
                     return false;
                 }
             }else{
-                id.parent('div').find('.errorFrame').html(mensageErrorCep).addClass('error');
+                controlError(id,false, mensageErrorCep);
                 return false;
             }
         }
@@ -38,22 +56,21 @@ $(function(){
     // |    =====   =====    =====   =====   =====
     // |    =====   [   Empty field    ]    -----
     // |    =====   =====    =====   =====   =====
-        function emptyField(id, minimumValue=1){
+        function emptyField(id, minimumValue=1)
+        {
             var s = id.val();
 
-            console.log(s);
-
             var data = {
-                chortName           : "Este campo precisa ser preenchido",
-                minimunSizeName     : minimumValue
+                shortAnswer       : "Este campo precisa ser preenchido",
+                minimunSizeName   : minimumValue
             };
 
             if(s.length < data.minimunSizeName){
-                id.parent('div').find('.errorFrame').html(data.chortName).addClass('error');
+                controlError(id,false, data.shortAnswer);
                 return false;
             }
 
-            id.parent('div').find('.errorFrame').html("").removeClass('error');
+            controlError(id,true, "");
             return true;
 
         }//end function 
@@ -65,16 +82,18 @@ $(function(){
     // |    =====   =====    =====   =====   =====
     // |    =====   [   Valida email    ]    -----
     // |    =====   =====    =====   =====   =====
-        function validateEmail(id){
+        function validateEmail(id)
+        {
             email = id.val();
 
             var reg = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/
 
             if (reg.test(email)){
-                id.parent('div').find('.errorFrame').html("").removeClass('error');
+                controlError(id,true, "");
                 return true;
             }else{
-                id.parent('div').find('.errorFrame').html("Por favor preencha o campo E-mail").addClass('error');
+
+                controlError(id,false, "Por favor preencha o campo E-mail");
                 return false;
             }
         }
@@ -87,7 +106,8 @@ $(function(){
     // |    -----   [    Mask phone     ]   -----
     // |    =====    =====   =====   =====   =====
         // =========  Mask Tel =========
-            function maskTel(v){
+            function maskTel(v)
+            {
                 if(v.length <= 15){
                     v=v.replace(/\D/g,"");
                     v=v.replace(/^(\d{2})(\d)/g,"($1) $2");
@@ -112,7 +132,8 @@ $(function(){
     // |    =====    =====   =====   =====   =====
     // |    -----   [    Mask CEP     ]   -----
     // |    =====    =====   =====   =====   =====
-        function mascarCep(s){
+        function mascarCep(s)
+        {
             v = s.val();
 
             if(v.length <= 9){
@@ -138,11 +159,6 @@ $(function(){
 
 
 
-
- 
-
-
-
     $('#formId').submit(function(){
     
         // ==================  Camp name ======================
@@ -162,7 +178,7 @@ $(function(){
         // ==================  Camp Endereco  ====================
     
         // ==================  Camp Endereco_numero  ====================
-           if(!emptyField($("input[name='endereco_numero']"), 1)){  return false; }
+           if(!emptyField($("input[name='endereco_numero']"), 1)){   return false; }
         // ==================  Camp Endereco_numero  ====================
     
         // ==================  Camp telefone  ====================
@@ -186,8 +202,8 @@ $(function(){
         // ==================  Camp telefone  ====================
 
         var dados = $(this).serialize();
-        
-        jQuery.ajax({
+
+        $.ajax({
             type: "POST",
             url: $('#formId').attr('action'),
             data: dados,

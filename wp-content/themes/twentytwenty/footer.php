@@ -13,11 +13,8 @@
 
 ?>
 			<footer id="site-footer" role="contentinfo" class="header-footer-group">
-
 				<div class="section-inner">
-
 					<div class="footer-credits">
-
 						<p class="footer-copyright">&copy;
 							<?php
 							echo date_i18n(
@@ -33,7 +30,6 @@
 								<?php _e( 'Powered by WordPress', 'twentytwenty' ); ?>
 							</a>
 						</p><!-- .powered-by-wordpress -->
-
 					</div><!-- .footer-credits -->
 
 					<a class="to-the-top" href="#site-header">
@@ -50,11 +46,23 @@
 							?>
 						</span><!-- .to-the-top-short -->
 					</a><!-- .to-the-top -->
-
 				</div><!-- .section-inner -->
-
 			</footer><!-- #site-footer -->
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
 		<?php wp_footer(); ?>
 
 	</body>

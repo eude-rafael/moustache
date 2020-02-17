@@ -1,5 +1,7 @@
 #formId {
+ 
     div{
+
         input{
             border-radius: 0px;
             padding: 15px 22px;
@@ -7,6 +9,7 @@
             border: solid 2px #dcdcdc;
             color: #5b5b5f;
         }
+
         .error{
             border: solid 2px red;
             background: #F00;
@@ -18,8 +21,8 @@
             position: absolute;
         }
     }
-}
 
+}
 
 .errorFrame{
     position: absolute !important;
@@ -29,7 +32,6 @@
     z-index: 100;
     display: none;
 }
- 
 
 .btenviar{
     align-self: center !important;
