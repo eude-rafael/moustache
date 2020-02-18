@@ -12,52 +12,23 @@
 
 	echo '<div class="container">';
 
-	if(have_posts()){ 
-		// Load posts loop.
-		while ( have_posts() ) {
-			the_post();
+		if(have_posts()){ 
+			// Load posts loop.
+			while ( have_posts() ) {
+				the_post();
 
-			echo '<h1>';
-			the_title();
-			echo '</h1>';
-	
-			echo '<p>';
-			the_content();
-			echo '</p>';
+				echo '<h1>';
+				the_title();
+				echo '</h1>';
+		
+				echo '<p>';
+				the_content();
+				echo '</p>';
+			}
+
+		}else{ 
+			//Posts empty
 		}
-
-		echo '<hr/><hr/><hr/><hr/><hr/>';
-
-
-
-
-
-
-
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'twentynineteen' ),
-				'after'  => '</div>',
-			)
-		);
-		
-
-
-		
-
-
-
-
-
-echo 'Final';
-		echo '<hr/><hr/><hr/><hr/><hr/>';
-
-
-	}else{ 
-
-		echo '	<p> nada encontrado</p>';
-	}
-
 
 	echo ' </div>';
 

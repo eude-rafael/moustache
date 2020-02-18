@@ -5,10 +5,10 @@
                     <div class="carousel-item  active">
                     <div class="container ">
                         <div class="carousel-caption">
-                        <img class="first-slide" src="<?php home_url(); ?>wp-content/themes/moustashe/assets/img/slogan.png" >
+                        <img class="first-slide" src="<?php echo get_option('home'); ?>/wp-content/themes/moustashe/assets/img/slogan.png" >
                         </div>
                     </div>
-                    <img class="first-slide" src="<?php home_url(); ?>wp-content/themes/moustashe/assets/img/banner.png" alt="First slide">
+                    <img class="first-slide" src="<?php echo get_option('home'); ?>/wp-content/themes/moustashe/assets/img/banner.png" alt="First slide">
                     </div>
                 </div>
             </div>
