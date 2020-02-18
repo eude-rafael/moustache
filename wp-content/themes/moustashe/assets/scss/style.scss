@@ -10,7 +10,10 @@
 */
 @charset "UTF-8";
 
-@import 'scss_parts/base'; 
+
+@import 'scss_parts/mixin';
+@import 'scss_parts/base';
+@import 'scss_parts/menu_main';
 @import 'scss_parts/form';
 @import 'scss_parts/carousel';
 @import 'scss_parts/footer';

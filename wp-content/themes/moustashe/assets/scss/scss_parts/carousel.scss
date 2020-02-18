@@ -1,3 +1,30 @@
+#myCarousel{
+    border: solid 4px #434040;
+}
+
+#myCarousel > div > div > div > div > h1{
+    font-family: 'Lato', sans-serif;
+    font-weight: 200;
+    font-style: italic;
+}
+
+.carousel-caption {
+    position: absolute;
+    right: 15%;
+    top: 30%;
+    bottom: none;
+    left: 15%;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+#myCarousel > div > div > div > div > img {
+    width: 80%;
+}
+
 .carousel-item{
     div{
        div {
