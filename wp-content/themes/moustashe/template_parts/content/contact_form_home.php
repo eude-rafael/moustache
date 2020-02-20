@@ -1,9 +1,17 @@
 
-    <!-- [   CONTC FORM   ] -->
+
+<div class="row"> 
+    <div class="container returnAjaxData"> </div>
+</div>
+
+
+<!-- [   CONTC FORM   ] -->
     <session>
             <div class="container m-t-160">
-                <form id="formId" action="xxxxxxxxxxxx zzzzzzzzz">
+                <form id="formId" action="http://localhost/2020/Teste-moustache/wordpress/index.php/contact_ajax/" method="post">
                     <div class="form-row">
+                        <input type="hidden" name="action" placeholder="ajax_form">
+
                         <div class="col-6">
                             <input type="text" class="form-control" name="name" placeholder="Seu nome">
                             <div class="errorFrame" msg="name"></div>

@@ -1,4 +1,6 @@
-$(function(){
+jQuery(function($){ 
+
+
 
     /* =====    =====   [       Carousel        ]   =====   ===== */
         $('#carousel_products').carousel({ interval: 3500 });
@@ -201,30 +203,23 @@ $(function(){
            if(!emptyField($("input[name='estado']"),2)){  return false; }
         // ==================  Camp telefone  ====================
 
-        var dados = $(this).serialize();
-
+        var dados =  $('#formId').serialize(); 
         $.ajax({
             type: "POST",
-            url: $('#formId').attr('action'),
-            data: dados,
+            //url: $('#formId').attr('action'),
+            url: "http://localhost/2020/Teste-moustache/wordpress/index.php/contact_ajax/",
+            data:  {name : 'xxxffffeeee'},
             success: function( data )
             {
-                // if(data == 'false'){
-                //     $('.sendMailError').removeClass('off');
-                //     $('window').animate({
-                //         scrollTop: 560
-                //     }, 1000);
-                // }else{
-                //     $('.sendMailOk').removeClass('off');
 
-                //     $('.contactFormContato').addClass('off');
-                //     $('window').animate({
-                //         scrollTop: 560
-                //     }, 1000);
-                //     setTimeout(function(){
-                //         location.href="./";
-                //     },12000);
-                // }
+                if(data){
+                    $(".returnAjaxData").append('<div class="alert alert-success" role="alert">Formulário enviado com sucesso!</div>');
+                }
+                $(".returnAjaxData").append('<div class="alert alert-secondary" role="alert">:( algo deu errado!</div>');
+
+            },
+            error: function(){
+                $(".returnAjaxData").html('Retornou por erro ');
             }
         });
         return false;

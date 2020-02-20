@@ -1,4 +1,8 @@
 
+
+
+
+
    <!-- [   TITLE AREA  ] -->
         <section class="jumbotron bg-fff text-center">
             <div class="container">
@@ -9,244 +13,179 @@
         </section>
     <!-- [   TITLE AREA  ] -->
 
- 
-    <!-- [   CAROUSEL  ERROR  ] -->
-        <session>
-            <div class="container">
-                <div id="carousel_products" class="carousel slide" data-ride="carousel">
-                    <div id="carouselMarquer">
-                        <ul  class="carousel-indicators">
-                            <li data-target="#carousel_products" data-slide-to="0" class="active"></li>
-                            <li data-target="#carousel_products" data-slide-to="1"></li>
-                            <li data-target="#carousel_products" data-slide-to="2"></li>
-                        </ul>
-                    </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="row">        
-                                <div class=" col-md-4 ">
-                                    <div class="card mb-4 box-shadow">
-                                        <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: auto; width: 100%; display: block;" 
-                                        src="<?php echo get_option('home'); ?>/wp-content/themes/moustashe/assets/img/card.jpg" data-holder-rendered="true">
-                                        <div class="card-body col-md-11 align-self-center">
-                                            <h3>
-                                                Lorem ipsum <br class="d-xl-block">
-                                                dolor sit
-                                            </h3>
-                                            <p class="card-text m-t-20">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                            </p>
-                                            <button type="button" class="btn btn-secondary btn-lg btn-block bt-thumb-carrousel m-t-30 m-b-10">Link Externo</button>
-                                        </div>
-                                    </div>
-                                </div>        
-                                <div class=" col-md-4 ">
-                                    <div class="card mb-4 box-shadow">
-                                        <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: auto; width: 100%; display: block;" 
-                                        src="<?php echo get_option('home'); ?>/wp-content/themes/moustashe/assets/img/card.jpg" data-holder-rendered="true">
-                                        <div class="card-body col-md-11 align-self-center">
-                                            <h3>
-                                                Lorem ipsum <br class="d-xl-block">
-                                                dolor sit
-                                            </h3>
-                                            <p class="card-text m-t-20">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                            </p>
-                                            <button type="button" class="btn btn-secondary btn-lg btn-block bt-thumb-carrousel m-t-30 m-b-10">Link Externo</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class=" col-md-4 ">
-                                    <div class="card mb-4 box-shadow">
-                                        <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: auto; width: 100%; display: block;" 
-                                        src="<?php echo get_option('home'); ?>/wp-content/themes/moustashe/assets/img/card.jpg" data-holder-rendered="true">
-                                        <div class="card-body col-md-11 align-self-center">
-                                            <h3>
-                                                Lorem ipsum <br class="d-xl-block">
-                                                dolor sit
-                                            </h3>
-                                            <p class="card-text m-t-20">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                            </p>
-                                            <button type="button" class="btn btn-secondary btn-lg btn-block bt-thumb-carrousel m-t-30 m-b-10">Link Externo</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+    <?php
+        $my_args_carousel = array(
+            'post_type' =>  'work',
+            'post_per_page' => 3 
+        );
 
-                        <div class="carousel-item ">
-                            <div class="row">        
-                                <div class=" col-md-4 ">
-                                    <div class="card mb-4 box-shadow">
-                                        <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: auto; width: 100%; display: block;" 
-                                        src="<?php echo get_option('home'); ?>/wp-content/themes/moustashe/assets/img/card.jpg" data-holder-rendered="true">
-                                        <div class="card-body col-md-11 align-self-center">
-                                            <h3>
-                                                Lorem ipsum <br class="d-xl-block">
-                                                dolor sit
-                                            </h3>
-                                            <p class="card-text m-t-20">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                            </p>
-                                            <button type="button" class="btn btn-secondary btn-lg btn-block bt-thumb-carrousel m-t-30 m-b-10">Link Externo</button>
-                                        </div>
-                                    </div>
-                                </div>        
-                                <div class=" col-md-4 ">
-                                    <div class="card mb-4 box-shadow">
-                                        <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: auto; width: 100%; display: block;" 
-                                        src="<?php echo get_option('home'); ?>/wp-content/themes/moustashe/assets/img/card.jpg" data-holder-rendered="true">
-                                        <div class="card-body col-md-11 align-self-center">
-                                            <h3>
-                                                Lorem ipsum <br class="d-xl-block">
-                                                dolor sit
-                                            </h3>
-                                            <p class="card-text m-t-20">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                            </p>
-                                            <button type="button" class="btn btn-secondary btn-lg btn-block bt-thumb-carrousel m-t-30 m-b-10">Link Externo</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class=" col-md-4 ">
-                                    <div class="card mb-4 box-shadow">
-                                        <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: auto; width: 100%; display: block;" 
-                                        src="<?php echo get_option('home'); ?>/wp-content/themes/moustashe/assets/img/card.jpg" data-holder-rendered="true">
-                                        <div class="card-body col-md-11 align-self-center">
-                                            <h3>
-                                                Lorem ipsum <br class="d-xl-block">
-                                                dolor sit
-                                            </h3>
-                                            <p class="card-text m-t-20">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                            </p>
-                                            <button type="button" class="btn btn-secondary btn-lg btn-block bt-thumb-carrousel m-t-30 m-b-10">Link Externo</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+        $my_query_carousel = new WP_Query($my_args_carousel);
 
-                        <div class="carousel-item ">
-                            <div class="row">        
-                                <div class=" col-md-4 ">
-                                    <div class="card mb-4 box-shadow">
-                                        <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: auto; width: 100%; display: block;" 
-                                        src="<?php echo get_option('home'); ?>/wp-content/themes/moustashe/assets/img/card.jpg" data-holder-rendered="true">
-                                        <div class="card-body col-md-11 align-self-center">
-                                            <h3>
-                                                Lorem ipsum <br class="d-xl-block">
-                                                dolor sit
-                                            </h3>
-                                            <p class="card-text m-t-20">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                            </p>
-                                            <button type="button" class="btn btn-secondary btn-lg btn-block bt-thumb-carrousel m-t-30 m-b-10">Link Externo</button>
-                                        </div>
-                                    </div>
-                                </div>        
-                                <div class=" col-md-4 ">
-                                    <div class="card mb-4 box-shadow">
-                                        <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: auto; width: 100%; display: block;" 
-                                        src="<?php echo get_option('home'); ?>/wp-content/themes/moustashe/assets/img/card.jpg" data-holder-rendered="true">
-                                        <div class="card-body col-md-11 align-self-center">
-                                            <h3>
-                                                Lorem ipsum <br class="d-xl-block">
-                                                dolor sit
-                                            </h3>
-                                            <p class="card-text m-t-20">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                            </p>
-                                            <button type="button" class="btn btn-secondary btn-lg btn-block bt-thumb-carrousel m-t-30 m-b-10">Link Externo</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class=" col-md-4 ">
-                                    <div class="card mb-4 box-shadow">
-                                        <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: auto; width: 100%; display: block;" 
-                                        src="<?php echo get_option('home'); ?>/wp-content/themes/moustashe/assets/img/card.jpg" data-holder-rendered="true">
-                                        <div class="card-body col-md-11 align-self-center">
-                                            <h3>
-                                                Lorem ipsum <br class="d-xl-block">
-                                                dolor sit
-                                            </h3>
-                                            <p class="card-text m-t-20">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                            </p>
-                                            <button type="button" class="btn btn-secondary btn-lg btn-block bt-thumb-carrousel m-t-30 m-b-10">Link Externo</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row align-center-flex-box">
-                            <div class="new-control-arrowa align-self-center col-md-3 ">
-                                <div class="left"  href="#carousel_products" role="button" data-slide="prev">
-                                    <
-                                </div>
-                                
-                                <div class="right"  href="#carousel_products" role="button" data-slide="next">  
-                                    >
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <a class="carousel-control-prev" href="#carousel_products" data-slide="prev">
-                        <span class="carousel-control-prev-icon"></span>
-                    </a>
-                    <a class="carousel-control-next" href="#carousel_products" data-slide="next">
-                        <span class="carousel-control-next-icon"></span>
-                    </a>
-                </div>
-            </div>
-        </session>
-    <!-- [   CAROUSEL  ERROR  ] -->
+        if($my_query_carousel->have_posts()){
+    ?>
 
-
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <!-- [   CAROUSEL  ERROR  ] -->
+            <session>
+                <div class="container">
+                    <div id="carousel_products" class="carousel slide" data-ride="carousel">
+                        <div id="carouselMarquer">
+                            <ul  class="carousel-indicators">
+                                <li data-target="#carousel_products" data-slide-to="0" class="active"></li>
+                                <li data-target="#carousel_products" data-slide-to="1"></li>
+                                <li data-target="#carousel_products" data-slide-to="2"></li>
+                            </ul>
+                        </div>
+                        <div class="carousel-inner">
 
 <?php
-    $my_args_carousel = array(
-        'post_type' =>  'banneres',
-        'post_per_page' => 3 
-    );
+    $x = 1;
+    $activeConter = 0;
 
-    $my_query_carousel = new WP_Query($my_args_carousel);
 
-    if($my_query_carousel->have_posts()){
-        while($my_query_carousel->have_posts()){
-            $my_query_carousel->the_post();
-           
-            the_title();
+    while($my_query_carousel->have_posts()){
+        $my_query_carousel->the_post();
 
-            //retornando a imagem
-            echo '<br/>';
-            the_post_thumbnail('post-thumbnail', array('class' => 'xxx'));
+        //********************************************* */
+            if($activeConter==0){
+                $var = ' active ';
+                $activeConter = 1;
+            }else{
+                $var = ' ';
+            }
+        //********************************************* */
 
-            //Conteudo 
-            echo '<br/>';
-            the_content();
+        
+        if($x==1){
+            echo '
+                <div class="carousel-item '.$var.'">
+                    <div class="row">
+            ';
 
-            //Link do post
-            echo '<br/>';
-            the_permalink();
-
-            echo '<br/>';
-            //Somente a url
-            the_post_thumbnail_url();
-
-            echo '<br/>';
-            //categoria
-            the_category_ID();
-
-             
+            $open = true;
         }
+        
+        echo '
+            <div class=" col-md-4 ">
+                <div class="card mb-4 box-shadow">
+                    <img class="card-img-top"   alt="
+        '; 
+        
+        the_title();
+
+                    echo'" style="height: auto; width: 100%; display: block;" 
+                    src="'; the_post_thumbnail_url();
+        
+                    echo'" data-holder-rendered="true">
+                        <div class="card-body col-md-11 align-self-center">
+                        <h3>
+        ';
+
+        the_title();
+
+        echo'
+                        </h3>
+                        <p class="card-text m-t-20">
+        ';
+
+        the_content();
+
+        echo'
+                        </p>
+                        <a href="';
+
+        the_permalink();
+
+                        echo '" type="button" class="btn btn-secondary btn-lg btn-block bt-thumb-carrousel m-t-30 m-b-10 ">Link Externo</a>
+                    </div>
+                </div>
+            </div>
+        ';
+        
+        if($x==3){
+            $open = false;
+            echo '
+                    </div>
+                </div>
+            ';
+            $x = 0;
+        }
+
+        $x++;
     }
 
+
+    if($open){
+        echo '
+                </div>
+            </div>
+        ';
+    }
+
+
+?>
+
+
+
+
+
+
+                                     
+                            
+
+                            
+                            
+
+                            <div class="row align-center-flex-box">
+                                <div class="new-control-arrowa align-self-center col-md-3 ">
+                                    <div class="left"  href="#carousel_products" role="button" data-slide="prev">
+                                        <
+                                    </div>
+                                    
+                                    <div class="right"  href="#carousel_products" role="button" data-slide="next">  
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carousel_products" data-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#carousel_products" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </a>
+                    </div>
+                </div>
+            </session>
+        <!-- [   CAROUSEL  ERROR  ] -->
+
+<?php
+
+
+
+        // while($my_query_carousel->have_posts()){
+        //     $my_query_carousel->the_post();
+           
+        //     the_title();
+
+        //     //retornando a imagem
+        //     the_post_thumbnail('post-thumbnail', array('class' => 'xxx'));
+
+        //     //Conteudo 
+        //     the_content();
+
+        //     //Link do post
+        //     the_permalink();
+
+
+        //     //Somente a url
+        //     the_post_thumbnail_url();
+        // }
+    }
+?>
+
+
+<?php
     wp_reset_query();
-
-
 ?>
 
 
