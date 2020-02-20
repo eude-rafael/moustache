@@ -28,12 +28,12 @@
                         </div>
 
                         <div class="col-4 ">
-                            <input type="text" class="form-control" name="endereco" placeholder="EndereÃ§o">
+                            <input type="text" class="form-control" name="endereco" placeholder="Endereço">
                             <div class="errorFrame" msg="name"></div>
                         </div>
 
                         <div class="col-2 ">
-                            <input type="text" class="form-control" name="endereco_numero" placeholder="NÃºmero">
+                            <input type="text" class="form-control" name="endereco_numero" placeholder="Número">
                             <div class="errorFrame" msg="name"></div>
                         </div>
 
