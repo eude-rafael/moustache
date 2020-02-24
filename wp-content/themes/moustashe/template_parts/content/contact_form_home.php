@@ -3,14 +3,28 @@
 <div class="row"> 
     <div class="container returnAjaxData"> </div>
 </div>
-
+ 
 
 <!-- [   CONTC FORM   ] -->
     <session>
             <div class="container m-t-160">
                 <form id="formId" action="http://localhost/2020/Teste-moustache/wordpress/index.php/contact_ajax/" method="post">
                     <div class="form-row">
-                        <input type="hidden" name="action" placeholder="ajax_form">
+
+                        <div class="col-12">
+                            <div class="barSend off">
+                                <div></div>
+                            </div>
+
+                            <div class="forMensager">
+                                <div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <input type="hidden" name="action" value="ajax_action">
 
                         <div class="col-6">
                             <input type="text" class="form-control" name="name" placeholder="Seu nome">
@@ -28,12 +42,12 @@
                         </div>
 
                         <div class="col-4 ">
-                            <input type="text" class="form-control" name="endereco" placeholder="Endereço">
+                            <input type="text" class="form-control" name="endereco" placeholder="EndereÃ§o">
                             <div class="errorFrame" msg="name"></div>
                         </div>
 
                         <div class="col-2 ">
-                            <input type="text" class="form-control" name="endereco_numero" placeholder="Número">
+                            <input type="text" class="form-control" name="endereco_numero" placeholder="NÃºmero">
                             <div class="errorFrame" msg="name"></div>
                         </div>
 

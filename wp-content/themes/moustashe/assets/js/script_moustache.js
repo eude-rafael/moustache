@@ -1,10 +1,65 @@
 jQuery(function($){ 
 
+    /* =====    =====   [       Carousel        ]   =====   ===== */
+    $('#carousel_products').carousel({ interval: 3500 });
+    /* =====    =====   [       Carousel        ]   =====   ===== */
+
+    /* =====    =====   [       Js animations        ]   =====   ===== */
+        function barSending(idEvent){
+            idEvent.animate({width: '100%'}, 1450);
+            return true;
+        }
+
+        function barSendingEnding(idEvent){
+            idEvent.css({width: '0%'});
+            return true;
+        }
+
+        function reponseTrue(){
+            var barSendingReturn = barSending(idBarevent);
+
+            if(barSendingReturn){
+                setTimeout(function(){
+                    barSendingEnding(idBarevent);
+                    idBasend.removeClass('on').addClass('off');
+                    idMensage.find("div").addClass('sendOk').html(' :) Mensagem enviada com sucesso! ?');
+                },2000);
+
+                setTimeout(function(){
+                    barSendingEnding(idBarevent);
+                    idBasend.removeClass('on').addClass('off');
+                    idMensage.find("div").removeClass('sendOk').html('');
+                    $("input").val("");
+                },6500);
+            }
+        }
+
+        function reponseFalse(n){
+            var barSendingReturn = barSending(idBarevent);
+            if(n == 1){tipeError = 'success';}else{tipeError = 'error';}
+
+            if(barSendingReturn){
+                setTimeout(function(){
+                    barSendingEnding(idBarevent);
+                    idBasend.removeClass('on').addClass('off');
+                    idMensage.find("div").addClass('sendError').html(' :( Algo de errado aconteceu!'+tipeError);
+                },2000);
+
+                setTimeout(function(){
+                    barSendingEnding(idBarevent);
+                    idBasend.removeClass('on').addClass('off');
+                    idMensage.find("div").removeClass('sendError').html('');
+
+                },9500);
+            }
+        }
+
+        var idBasend = $(".barSend");
+        var idBarevent = $(".barSend > div");
+        var idMensage = $(".forMensager");
+    /* =====    =====   [       Js animations        ]   =====   ===== */
 
 
-    /* =====    =====   [       Carousel        ]   =====   ===== */
-        $('#carousel_products').carousel({ interval: 3500 });
-    /* =====    =====   [       Carousel        ]   =====   ===== */
 
     // |    =====   =====    =====   =====   =====   =====
     // |    =====   [   Control error    ]    -----
@@ -205,21 +260,25 @@ jQuery(function($){
 
         var dados =  $('#formId').serialize(); 
         $.ajax({
-            type: "POST",
+            type: "post",
             //url: $('#formId').attr('action'),
-            url: "http://localhost/2020/Teste-moustache/wordpress/index.php/contact_ajax/",
-            data:  {name : 'xxxffffeeee'},
-            success: function( data )
-            {
-
-                if(data){
-                    $(".returnAjaxData").append('<div class="alert alert-success" role="alert">Formulário enviado com sucesso!</div>');
-                }
-                $(".returnAjaxData").append('<div class="alert alert-secondary" role="alert">:( algo deu errado!</div>');
-
+            url: "./wp-admin/admin-ajax.php",
+            data:  dados,
+            beforeSend: function(){
+                idBasend.removeClass('off').addClass('on');
             },
-            error: function(){
-                $(".returnAjaxData").html('Retornou por erro ');
+    
+            success: function(data){
+                var reponse =  JSON.parse(data);
+                if(reponse.return){
+                    reponseTrue();
+                }else{
+                    reponseFalse(1);
+                }
+            },
+    
+            error: function(data){
+                reponseFalse(2);
             }
         });
         return false;

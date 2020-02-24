@@ -1,6 +1,8 @@
 #formId {
- 
+    
     div{
+
+        
 
         input{
             border-radius: 0px;
@@ -42,4 +44,48 @@
 .form-row>.col, .form-row>[class*=col-] {
     padding-right: 15px;
     padding-left: 5px;
+}
+
+
+
+
+.off{
+    display:none;
+}
+
+.on{
+    display:block;
+}
+
+.barSend{
+    min-width:100%;
+    height: 2px;
+    background: #49a0ec;
+    padding:none;
+    overflow: hidden;
+    position:relative;
+}
+
+.barSend > div{
+    width:5%;
+    height: 5px;
+    background: #02fd3b;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.forMensager > div {
+    font-size: 40px;
+    text-align: center;
+}
+
+.forMensager > .sendOk {
+    color: #7c9c83;
+    border: solid #7c9c83 2px;
+}
+
+.forMensager > .sendError {
+    color: #b90303;
+    border: solid #b90303 2px;
 }
