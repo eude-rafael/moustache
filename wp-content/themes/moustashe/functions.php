@@ -1,51 +1,54 @@
 <?php
 
 
-//get_stylesheet_directory_uri().
-function remove_js_padrao(){
+function troca_jquery(){
+    //Remove Old jQuery
     wp_deregister_script( 'jquery' );
 
-    wp_register_script(
-        'jquery',
-        '/wp-content/themes/moustashe/assets/js/jquery.js',
-        array(),
-        '3.1',false
-    );
+    // =====    =====   [Add Jquery]  =====   =====
+        wp_register_script(
+            'jquery',
+            '/wp-content/themes/moustashe/assets/js/jquery.js',
+            array(),
+            '3.1',false
+        );
+    // =====    =====   [Add Jquery]  =====   =====
 
+    // =====    =====   [Add bootstrap]  =====   =====
+        wp_register_script(
+            'bootstrap',
+            'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js',
+            array('jquery'),
+            '1',false
+        );
+    // =====    =====   [Add bootstrap]  =====   =====
+
+
+    // =====    =====   [Add Main JS]  =====   =====
+        wp_register_script(
+            'main',
+            '/wp-content/themes/moustashe/assets/js/script_moustache.js',
+            array('jquery','bootstrap'),
+            '1',false
+        );
+    // =====    =====   [Add Main JS]  =====   =====
+
+    //Add jquery 
     wp_enqueue_script('jquery');
-}
-
-add_action('wp_enqueue_scripts', 'remove_js_padrao');
-
- 
-function register_bootstrap_js(){
-    wp_register_script(
-        'bootstrap',
-        'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js',
-        array('jquery'),
-        '1',false
-    );
-
+    // Add bootstrap
     wp_enqueue_script('bootstrap');
-}
-
-add_action('wp_enqueue_scripts', 'register_bootstrap_js');
-
-
-
-function register_main_js(){
-    wp_register_script(
-        'main',
-        '/wp-content/themes/moustashe/assets/js/script_moustache.js',
-        array('jquery'),
-        '1',false
-    );
-
+    //Add main JS
     wp_enqueue_script('main');
 }
 
-add_action('wp_enqueue_scripts', 'register_main_js');
+// Add in queuescript
+add_action('wp_enqueue_scripts', 'troca_jquery');
 
+ 
+ 
+
+
+ 
 
 function InformacaoesRodape(){
     add_theme_support('post-thumbnails');
